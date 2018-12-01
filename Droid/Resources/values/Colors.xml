@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- blues -->
+    <color name="blue">#004486</color>
+    <color name="dark_blue">#001e5e</color>
+    <color name="light_blue">#4a6ebd</color>
+    <color name="light_more_blue">#ddedff</color>
+
+    <!-- grays -->
+    <color name="gray">#797979</color>
+    <color name="dark_gray">#464646</color>
+    <color name="light_gray">#ededed</color>
+
+    <!-- yellows -->
+    <color name="yellow">#FFD200</color>
+    <color name="light_yellow">#ffff52</color>
+
+    <!-- whites -->
+    <color name="white_bone">#f5f5f6</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="red">#B71C1C</color>
+
+</resources>
