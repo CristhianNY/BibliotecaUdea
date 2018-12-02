@@ -5,6 +5,9 @@ using Android.Content;
 using System.Collections.Generic;
 using BibliotecaUdeA.Business.Dtos;
 using System.Linq;
+using Android.Graphics;
+using System.Net;
+using Square.Picasso;
 
 namespace BibliotecaUdeA.Droid.Features
 {
@@ -28,8 +31,8 @@ namespace BibliotecaUdeA.Droid.Features
             var viewHolder = holder as BookViewHolder;
             viewHolder.title.Text = currentItem.Title;
             viewHolder.description.Text = currentItem.SubTitle;
-            Android.Net.Uri url = Android.Net.Uri.Parse(currentItem.Image);
-            viewHolder.imageBook.SetImageURI(url);
+            Picasso.With(context).Load(currentItem.Image).Into(viewHolder.imageBook);
+
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
