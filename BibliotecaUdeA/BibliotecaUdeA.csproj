@@ -46,6 +46,11 @@
     <Compile Include="Business\Dtos\ErrorResponse.cs" />
     <Compile Include="Business\Dtos\ErrorContainer.cs" />
     <Compile Include="Business\Dtos\Error.cs" />
+    <Compile Include="Business\Dtos\BaseResponse.cs" />
+    <Compile Include="Business\Validators\Validator.cs" />
+    <Compile Include="Business\Contracts\Common\IValidator.cs" />
+    <Compile Include="Business\Helpers\ValidatorHelper.cs" />
+    <Compile Include="Exceptions\NoDataException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -63,6 +68,9 @@
     <Folder Include="DataAcces\Repositories\Local\" />
     <Folder Include="Business\Contracts\Platform\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Business\Validators\" />
+    <Folder Include="Business\Contracts\Common\" />
+    <Folder Include="Business\Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ninject">
