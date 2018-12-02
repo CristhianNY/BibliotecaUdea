@@ -15,6 +15,5 @@
             android:hint="@string/search" />
 
     </android.support.design.widget.TextInputLayout>
-    
-    
+
 </LinearLayout>
