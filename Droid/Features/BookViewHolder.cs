@@ -22,6 +22,7 @@ namespace BibliotecaUdeA.Droid.Features
         {
             imageBook = itemView.FindViewById<ImageView>(Resource.Id.imageBook);
             title = itemView.FindViewById<TextView>(Resource.Id.title);
+            description = itemView.FindViewById<TextView>(Resource.Id.description);
         }
 
     }

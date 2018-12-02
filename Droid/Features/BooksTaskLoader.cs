@@ -20,7 +20,7 @@ namespace BibliotecaUdeA.Droid.Features
 
         public override Java.Lang.Object LoadInBackground()
         {
-            var response = booksManager.FetchBooksByName(name);
+            var response = booksManager.FetchBooksByName("mongodb");
             return new LoaderResponse<BaseResponse<BooksResponse>>(response);
         }
         protected override void OnReset()

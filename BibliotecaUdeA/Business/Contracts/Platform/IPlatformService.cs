@@ -10,5 +10,6 @@ namespace BibliotecaUdeA.Business.Contracts.Platform
         string AppVersion { get; }
         string DeviceModel { get; }
         CultureInfo CurrentCulture { get; }
+        HttpClientHandler PlatformHttpClientHandler();
     }
 }

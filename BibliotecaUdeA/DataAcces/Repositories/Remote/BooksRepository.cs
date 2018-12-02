@@ -20,7 +20,7 @@ namespace BibliotecaUdeA.DataAcces.Repositories.Remote
         {
             urlHelper = new URLHelper();
             this.platformService = platformService;
-            httpClientHandler = new HttpClientHandler();
+            httpClientHandler = this.platformService.PlatformHttpClientHandler();
             urlBase = urlHelper.BuildUrl(baseURL, rootEndPoint);
 
         }

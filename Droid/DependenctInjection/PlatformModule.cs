@@ -10,7 +10,8 @@ namespace BibliotecaUdeA.Droid.DependenctInjection
         public override void Load()
         {
             Bind<IPlatformService>().To<PlatformService>();
-          
+          //  Bind<INetworkManager>().To<NetworkManager>();
+
         }
     }
 }

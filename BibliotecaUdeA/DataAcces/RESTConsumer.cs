@@ -14,13 +14,10 @@ namespace BibliotecaUdeA.DataAcces
     public class RESTConsumer<PRequest, TResponse>
     {
         private HttpClientHandler handler;
-        private INetworkManager networkManager;
 
         public RESTConsumer(HttpClientHandler handler)
         {
             this.handler = handler;
-
-            networkManager = ServicesLocator.Get<INetworkManager>();
         }
 
         public TResponse ConsumeRestService(PRequest requestObject, string url, HttpMethod method, Dictionary<string, string> headers = null, double timeOutInSeconds = 60)
@@ -28,8 +25,6 @@ namespace BibliotecaUdeA.DataAcces
             HttpResponseMessage response;
             try
             {
-                if (networkManager.IsConnected)
-                {
                     Debug.WriteLine("URL: " + url);
 
                     HttpRequestMessage requestMessage = new HttpRequestMessage(method, url);
@@ -52,11 +47,7 @@ namespace BibliotecaUdeA.DataAcces
                     }
 
                     response = client.SendAsync(requestMessage).Result;
-                }
-                else
-                {
-                    throw new NoInternetConnectionException();
-                }
+
             }
             catch (NoInternetConnectionException exception)
             {

@@ -10,6 +10,7 @@ using System;
 using Android.Widget;
 using static Android.Provider.Settings;
 using System.Globalization;
+using BibliotecaUdeA.Droid.Components;
 
 namespace BibliotecaUdeA.Droid.DependenctInjection.Implementation
 {
@@ -23,6 +24,10 @@ namespace BibliotecaUdeA.Droid.DependenctInjection.Implementation
         public string Hwid => Secure.GetString(Application.Context.ContentResolver, Secure.AndroidId);
 
         public string DeviceModel => string.Format("{0}, {1}, {2}", Build.Model, Build.VERSION.SdkInt, string.Join(", ", Build.SupportedAbis));
- 
+
+        public HttpClientHandler PlatformHttpClientHandler()
+        {
+            return new CustomDelegatingHandler();
+        }
     }
 }
