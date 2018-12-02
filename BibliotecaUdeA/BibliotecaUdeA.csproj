@@ -34,6 +34,8 @@
     <Compile Include="Business\Contracts\Repositories\Remote\IBooksRepository.cs" />
     <Compile Include="Business\Dtos\BooksResponse.cs" />
     <Compile Include="Business\DependencyInjection\ServicesLocator.cs" />
+    <Compile Include="Business\DependencyInjection\Modules\RepositoriesModule.cs" />
+    <Compile Include="DataAcces\Repositories\Remote\BooksRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -44,6 +46,11 @@
     <Folder Include="Business\Contracts\Repositories\Local\" />
     <Folder Include="Business\Contracts\Repositories\Remote\" />
     <Folder Include="Business\DependencyInjection\" />
+    <Folder Include="Business\DependencyInjection\Modules\" />
+    <Folder Include="DataAcces\" />
+    <Folder Include="DataAcces\Repositories\" />
+    <Folder Include="DataAcces\Repositories\Remote\" />
+    <Folder Include="DataAcces\Repositories\Local\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ninject">
