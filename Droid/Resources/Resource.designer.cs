@@ -1220,44 +1220,44 @@ namespace BibliotecaUdeA.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a0057
-			public const int abc_background_cache_hint_selector_material_dark = 2131361879;
-			
 			// aapt resource value: 0x7f0a0058
-			public const int abc_background_cache_hint_selector_material_light = 2131361880;
+			public const int abc_background_cache_hint_selector_material_dark = 2131361880;
 			
 			// aapt resource value: 0x7f0a0059
-			public const int abc_btn_colored_borderless_text_material = 2131361881;
+			public const int abc_background_cache_hint_selector_material_light = 2131361881;
 			
 			// aapt resource value: 0x7f0a005a
-			public const int abc_btn_colored_text_material = 2131361882;
+			public const int abc_btn_colored_borderless_text_material = 2131361882;
 			
 			// aapt resource value: 0x7f0a005b
-			public const int abc_color_highlight_material = 2131361883;
+			public const int abc_btn_colored_text_material = 2131361883;
 			
 			// aapt resource value: 0x7f0a005c
-			public const int abc_hint_foreground_material_dark = 2131361884;
+			public const int abc_color_highlight_material = 2131361884;
 			
 			// aapt resource value: 0x7f0a005d
-			public const int abc_hint_foreground_material_light = 2131361885;
+			public const int abc_hint_foreground_material_dark = 2131361885;
+			
+			// aapt resource value: 0x7f0a005e
+			public const int abc_hint_foreground_material_light = 2131361886;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int abc_input_method_navigation_guard = 2131361796;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int abc_primary_text_disable_only_material_dark = 2131361886;
-			
 			// aapt resource value: 0x7f0a005f
-			public const int abc_primary_text_disable_only_material_light = 2131361887;
+			public const int abc_primary_text_disable_only_material_dark = 2131361887;
 			
 			// aapt resource value: 0x7f0a0060
-			public const int abc_primary_text_material_dark = 2131361888;
+			public const int abc_primary_text_disable_only_material_light = 2131361888;
 			
 			// aapt resource value: 0x7f0a0061
-			public const int abc_primary_text_material_light = 2131361889;
+			public const int abc_primary_text_material_dark = 2131361889;
 			
 			// aapt resource value: 0x7f0a0062
-			public const int abc_search_url_text = 2131361890;
+			public const int abc_primary_text_material_light = 2131361890;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int abc_search_url_text = 2131361891;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int abc_search_url_text_normal = 2131361797;
@@ -1268,29 +1268,29 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int abc_search_url_text_selected = 2131361799;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int abc_secondary_text_material_dark = 2131361891;
-			
 			// aapt resource value: 0x7f0a0064
-			public const int abc_secondary_text_material_light = 2131361892;
+			public const int abc_secondary_text_material_dark = 2131361892;
 			
 			// aapt resource value: 0x7f0a0065
-			public const int abc_tint_btn_checkable = 2131361893;
+			public const int abc_secondary_text_material_light = 2131361893;
 			
 			// aapt resource value: 0x7f0a0066
-			public const int abc_tint_default = 2131361894;
+			public const int abc_tint_btn_checkable = 2131361894;
 			
 			// aapt resource value: 0x7f0a0067
-			public const int abc_tint_edittext = 2131361895;
+			public const int abc_tint_default = 2131361895;
 			
 			// aapt resource value: 0x7f0a0068
-			public const int abc_tint_seek_thumb = 2131361896;
+			public const int abc_tint_edittext = 2131361896;
 			
 			// aapt resource value: 0x7f0a0069
-			public const int abc_tint_spinner = 2131361897;
+			public const int abc_tint_seek_thumb = 2131361897;
 			
 			// aapt resource value: 0x7f0a006a
-			public const int abc_tint_switch_track = 2131361898;
+			public const int abc_tint_spinner = 2131361898;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int abc_tint_switch_track = 2131361899;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int accent_material_dark = 2131361800;
@@ -1309,6 +1309,9 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f0a000d
 			public const int background_material_light = 2131361805;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int black = 2131361876;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int blue = 2131361867;
@@ -1358,8 +1361,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a0040
 			public const int design_bottom_navigation_shadow_color = 2131361856;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int design_error = 2131361899;
+			// aapt resource value: 0x7f0a006c
+			public const int design_error = 2131361900;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int design_fab_shadow_end_color = 2131361857;
@@ -1385,8 +1388,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a0048
 			public const int design_snackbar_background_color = 2131361864;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int design_tint_password_toggle = 2131361900;
+			// aapt resource value: 0x7f0a006d
+			public const int design_tint_password_toggle = 2131361901;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int dim_foreground_disabled_material_dark = 2131361814;
@@ -1499,8 +1502,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a0032
 			public const int primary_text_disabled_material_light = 2131361842;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int red = 2131361878;
+			// aapt resource value: 0x7f0a0057
+			public const int red = 2131361879;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int ripple_material_dark = 2131361843;
@@ -1526,11 +1529,11 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a003a
 			public const int switch_thumb_disabled_material_light = 2131361850;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int switch_thumb_material_dark = 2131361901;
-			
 			// aapt resource value: 0x7f0a006e
-			public const int switch_thumb_material_light = 2131361902;
+			public const int switch_thumb_material_dark = 2131361902;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int switch_thumb_material_light = 2131361903;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int switch_thumb_normal_material_dark = 2131361851;
@@ -1544,11 +1547,11 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0a003e
 			public const int tooltip_background_light = 2131361854;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int white = 2131361877;
+			// aapt resource value: 0x7f0a0056
+			public const int white = 2131361878;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int white_bone = 2131361876;
+			// aapt resource value: 0x7f0a0055
+			public const int white_bone = 2131361877;
 			
 			// aapt resource value: 0x7f0a0052
 			public const int yellow = 2131361874;
@@ -2305,26 +2308,26 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006a
-			public const int avd_hide_password_1 = 2130837610;
-			
 			// aapt resource value: 0x7f02006b
-			public const int avd_hide_password_2 = 2130837611;
+			public const int avd_hide_password_1 = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int avd_hide_password_3 = 2130837612;
+			public const int avd_hide_password_2 = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int avd_hide_password_3 = 2130837613;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02006d
-			public const int avd_show_password_1 = 2130837613;
-			
 			// aapt resource value: 0x7f02006e
-			public const int avd_show_password_2 = 2130837614;
+			public const int avd_show_password_1 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int avd_show_password_3 = 2130837615;
+			public const int avd_show_password_2 = 2130837615;
+			
+			// aapt resource value: 0x7f020070
+			public const int avd_show_password_3 = 2130837616;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2371,11 +2374,11 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f020063
 			public const int notification_icon_background = 2130837603;
 			
-			// aapt resource value: 0x7f020068
-			public const int notification_template_icon_bg = 2130837608;
-			
 			// aapt resource value: 0x7f020069
-			public const int notification_template_icon_low_bg = 2130837609;
+			public const int notification_template_icon_bg = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int notification_template_icon_low_bg = 2130837610;
 			
 			// aapt resource value: 0x7f020064
 			public const int notification_tile_bg = 2130837604;
@@ -2384,10 +2387,13 @@ namespace BibliotecaUdeA.Droid
 			public const int notify_panel_notification_icon_bg = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int tooltip_frame_dark = 2130837606;
+			public const int shape_hiperlink_underline = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int tooltip_frame_light = 2130837607;
+			public const int tooltip_frame_dark = 2130837607;
+			
+			// aapt resource value: 0x7f020068
+			public const int tooltip_frame_light = 2130837608;
 			
 			static Drawable()
 			{
@@ -2420,8 +2426,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f08009d
-			public const int action0 = 2131230877;
+			// aapt resource value: 0x7f08009e
+			public const int action0 = 2131230878;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -2444,17 +2450,17 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f08009a
-			public const int action_container = 2131230874;
+			// aapt resource value: 0x7f08009b
+			public const int action_container = 2131230875;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int action_divider = 2131230881;
+			// aapt resource value: 0x7f0800a2
+			public const int action_divider = 2131230882;
 			
-			// aapt resource value: 0x7f08009b
-			public const int action_image = 2131230875;
+			// aapt resource value: 0x7f08009c
+			public const int action_image = 2131230876;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2471,11 +2477,11 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f08009c
-			public const int action_text = 2131230876;
+			// aapt resource value: 0x7f08009d
+			public const int action_text = 2131230877;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int actions = 2131230890;
+			// aapt resource value: 0x7f0800ab
+			public const int actions = 2131230891;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
@@ -2510,8 +2516,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
-			// aapt resource value: 0x7f08009e
-			public const int cancel_action = 2131230878;
+			// aapt resource value: 0x7f08009f
+			public const int cancel_action = 2131230879;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -2525,8 +2531,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int chronometer = 2131230886;
+			// aapt resource value: 0x7f0800a7
+			public const int chronometer = 2131230887;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -2582,8 +2588,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int end_padder = 2131230892;
+			// aapt resource value: 0x7f0800ad
+			public const int end_padder = 2131230893;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
@@ -2627,8 +2633,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int icon_group = 2131230891;
+			// aapt resource value: 0x7f0800ac
+			public const int icon_group = 2131230892;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
@@ -2636,8 +2642,14 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int info = 2131230887;
+			// aapt resource value: 0x7f0800a8
+			public const int info = 2131230888;
+			
+			// aapt resource value: 0x7f080099
+			public const int input_layout_password = 2131230873;
+			
+			// aapt resource value: 0x7f08009a
+			public const int input_password = 2131230874;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -2663,14 +2675,14 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800af
-			public const int masked = 2131230895;
+			// aapt resource value: 0x7f0800b0
+			public const int masked = 2131230896;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int media_actions = 2131230880;
+			// aapt resource value: 0x7f0800a1
+			public const int media_actions = 2131230881;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int message = 2131230893;
+			// aapt resource value: 0x7f0800ae
+			public const int message = 2131230894;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2680,9 +2692,6 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
-			
-			// aapt resource value: 0x7f080099
-			public const int myButton = 2131230873;
 			
 			// aapt resource value: 0x7f080093
 			public const int navigation_header_container = 2131230867;
@@ -2696,14 +2705,14 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int notification_background = 2131230889;
+			// aapt resource value: 0x7f0800aa
+			public const int notification_background = 2131230890;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int notification_main_column = 2131230884;
 			
 			// aapt resource value: 0x7f0800a3
-			public const int notification_main_column = 2131230883;
-			
-			// aapt resource value: 0x7f0800a2
-			public const int notification_main_column_container = 2131230882;
+			public const int notification_main_column_container = 2131230883;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -2729,11 +2738,11 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int right_icon = 2131230888;
+			// aapt resource value: 0x7f0800a9
+			public const int right_icon = 2131230889;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int right_side = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int right_side = 2131230885;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -2837,8 +2846,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f08009f
-			public const int status_bar_latest_event_content = 2131230879;
+			// aapt resource value: 0x7f0800a0
+			public const int status_bar_latest_event_content = 2131230880;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -2873,8 +2882,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int time = 2131230885;
+			// aapt resource value: 0x7f0800a6
+			public const int time = 2131230886;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -2921,8 +2930,8 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int visible = 2131230894;
+			// aapt resource value: 0x7f0800af
+			public const int visible = 2131230895;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3315,6 +3324,9 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f0b0025
 			public const int path_password_strike_through = 2131427365;
 			
+			// aapt resource value: 0x7f0b0029
+			public const int search = 2131427369;
+			
 			// aapt resource value: 0x7f0b0011
 			public const int search_menu_title = 2131427345;
 			
@@ -3351,6 +3363,12 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f090163
 			public const int Animation_Design_BottomSheetDialog = 2131296611;
+			
+			// aapt resource value: 0x7f090184
+			public const int AppTheme = 2131296644;
+			
+			// aapt resource value: 0x7f090188
+			public const int AppTheme_Hyperlink_Primary_Body2 = 2131296648;
 			
 			// aapt resource value: 0x7f09009e
 			public const int Base_AlertDialog_AppCompat = 2131296414;
@@ -3844,6 +3862,12 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f090165
 			public const int Base_Widget_Design_TabLayout = 2131296613;
 			
+			// aapt resource value: 0x7f090187
+			public const int ButtonNegative = 2131296647;
+			
+			// aapt resource value: 0x7f090186
+			public const int ButtonPositive = 2131296646;
+			
 			// aapt resource value: 0x7f090000
 			public const int CardView = 2131296256;
 			
@@ -3852,6 +3876,9 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f090003
 			public const int CardView_Light = 2131296259;
+			
+			// aapt resource value: 0x7f090185
+			public const int CardViewContent = 2131296645;
 			
 			// aapt resource value: 0x7f090022
 			public const int Platform_AppCompat = 2131296290;
@@ -4222,6 +4249,9 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f090172
 			public const int Theme_Design_NoActionBar = 2131296626;
 			
+			// aapt resource value: 0x7f09018e
+			public const int ThemeControlColor = 2131296654;
+			
 			// aapt resource value: 0x7f09010b
 			public const int ThemeOverlay_AppCompat = 2131296523;
 			
@@ -4497,6 +4527,21 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f09017c
 			public const int Widget_Design_TextInputLayout = 2131296636;
+			
+			// aapt resource value: 0x7f09018a
+			public const int textview_form = 2131296650;
+			
+			// aapt resource value: 0x7f09018b
+			public const int textview_form_title = 2131296651;
+			
+			// aapt resource value: 0x7f09018d
+			public const int textview_link_call = 2131296653;
+			
+			// aapt resource value: 0x7f09018c
+			public const int textview_title = 2131296652;
+			
+			// aapt resource value: 0x7f090189
+			public const int textview_title_card = 2131296649;
 			
 			static Style()
 			{
