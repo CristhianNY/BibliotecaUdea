@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
- xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
  android:orientation="vertical" android:layout_width="match_parent" 
  android:layout_height="match_parent">
     <android.support.design.widget.TextInputLayout
@@ -15,5 +17,11 @@
             android:hint="@string/search" />
 
     </android.support.design.widget.TextInputLayout>
+    
+      <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </LinearLayout>
