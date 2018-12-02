@@ -36,6 +36,16 @@
     <Compile Include="Business\DependencyInjection\ServicesLocator.cs" />
     <Compile Include="Business\DependencyInjection\Modules\RepositoriesModule.cs" />
     <Compile Include="DataAcces\Repositories\Remote\BooksRepository.cs" />
+    <Compile Include="Business\Contracts\Platform\IPlatformService.cs" />
+    <Compile Include="DataAcces\UrlHelper.cs" />
+    <Compile Include="DataAcces\RESTConsumer.cs" />
+    <Compile Include="Business\Contracts\Platform\INetworkManager.cs" />
+    <Compile Include="Exceptions\NoInternetConnectionException.cs" />
+    <Compile Include="Exceptions\InternalServerException.cs" />
+    <Compile Include="Exceptions\UnexpectedException.cs" />
+    <Compile Include="Business\Dtos\ErrorResponse.cs" />
+    <Compile Include="Business\Dtos\ErrorContainer.cs" />
+    <Compile Include="Business\Dtos\Error.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -51,10 +61,15 @@
     <Folder Include="DataAcces\Repositories\" />
     <Folder Include="DataAcces\Repositories\Remote\" />
     <Folder Include="DataAcces\Repositories\Local\" />
+    <Folder Include="Business\Contracts\Platform\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ninject">
       <HintPath>..\packages\Portable.Ninject.3.3.1\lib\portable-net4+sl5+wp8+win8+wpa81+monotouch+monoandroid+Xamarin.iOS\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
