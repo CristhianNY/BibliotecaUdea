@@ -51,6 +51,8 @@
     <Compile Include="Business\Contracts\Common\IValidator.cs" />
     <Compile Include="Business\Helpers\ValidatorHelper.cs" />
     <Compile Include="Exceptions\NoDataException.cs" />
+    <Compile Include="Business\DependencyInjection\DependencyInjectionManager.cs" />
+    <Compile Include="Enumerations\PlatformKind.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -71,6 +73,7 @@
     <Folder Include="Business\Validators\" />
     <Folder Include="Business\Contracts\Common\" />
     <Folder Include="Business\Helpers\" />
+    <Folder Include="Enumerations\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ninject">

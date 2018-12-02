@@ -95,6 +95,7 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaUdeA\BibliotecaUdeA.csproj">
@@ -110,6 +111,8 @@
     <Compile Include="Features\BookViewHolder.cs" />
     <Compile Include="Features\BooksTaskLoader.cs" />
     <Compile Include="Features\Loaders\LoaderResponse.cs" />
+    <Compile Include="DependenctInjection\PlatformModule.cs" />
+    <Compile Include="DependenctInjection\Implementation\PlatformService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -135,6 +138,8 @@
     <Folder Include="Features\" />
     <Folder Include="Resources\drawable\" />
     <Folder Include="Features\Loaders\" />
+    <Folder Include="DependenctInjection\" />
+    <Folder Include="DependenctInjection\Implementation\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

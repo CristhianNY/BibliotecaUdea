@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Net.Http;
 
 namespace BibliotecaUdeA.Business.Contracts.Platform
@@ -8,6 +9,6 @@ namespace BibliotecaUdeA.Business.Contracts.Platform
         string Hwid { get; }
         string AppVersion { get; }
         string DeviceModel { get; }
-        HttpClientHandler PlatformHttpClientHandler();
+        CultureInfo CurrentCulture { get; }
     }
 }

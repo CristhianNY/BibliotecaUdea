@@ -9,8 +9,8 @@ namespace BibliotecaUdeA.DataAcces.Repositories.Remote
     public class BooksRepository : IBooksRepository
     {
         private const string booksEndPoint = "search/{0}";
-        private const string rootEndPoint = "api/mobility/v2.3/";
-        private const string baseURL = "https://api.itbook.store/1.0/";
+        private const string rootEndPoint = "1.0/";
+        private const string baseURL = "https://api.itbook.store/";
 
         private readonly IPlatformService platformService;
         private readonly HttpClientHandler httpClientHandler;
@@ -20,7 +20,7 @@ namespace BibliotecaUdeA.DataAcces.Repositories.Remote
         {
             urlHelper = new URLHelper();
             this.platformService = platformService;
-            httpClientHandler = this.platformService.PlatformHttpClientHandler();
+            httpClientHandler = new HttpClientHandler();
             urlBase = urlHelper.BuildUrl(baseURL, rootEndPoint);
 
         }
