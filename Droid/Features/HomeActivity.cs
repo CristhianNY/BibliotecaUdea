@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using Android.App;
-
+using Android.Content.PM;
+using Android.Support.V4.App;
+using Android.Support.V4.Content;
 using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Util;
@@ -12,8 +14,10 @@ using BibliotecaUdeA.Business.Dtos;
 namespace BibliotecaUdeA.Droid.Features
 {
     [Activity(Label = "HomeActivity", MainLauncher = true)]
-    public class HomeActivity : Activity
+    public class HomeActivity : Activity 
     {
+        private const int loaderId = 1;
+        private BooksTaskLoader booksTaskLoader;
         private  RecyclerView rv_books;
         private EditText search_box;
         private List<BookItem> books;
@@ -38,12 +42,17 @@ namespace BibliotecaUdeA.Droid.Features
         {
             booksAdapter = new BooksAdapter(this, books);
         }
-        #endregion
+
+        private void InitLoaders()
+        {
+
+        }
+            #endregion
 
 
-        #region Events
+            #region Events
 
-        private void Books_ItemClick(object sender, BookItem item)
+            private void Books_ItemClick(object sender, BookItem item)
         {
 
             Log.Info("prueba", "se llama el elemento");

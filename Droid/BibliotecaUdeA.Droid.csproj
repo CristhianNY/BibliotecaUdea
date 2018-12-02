@@ -108,6 +108,7 @@
     <Compile Include="Features\HomeActivity.cs" />
     <Compile Include="Features\BooksAdapter.cs" />
     <Compile Include="Features\BookViewHolder.cs" />
+    <Compile Include="Features\BooksTaskLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
