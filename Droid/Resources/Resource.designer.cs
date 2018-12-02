@@ -2567,6 +2567,9 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
+			// aapt resource value: 0x7f08009a
+			public const int description = 2131230874;
+			
 			// aapt resource value: 0x7f080090
 			public const int design_bottom_sheet = 2131230864;
 			
@@ -2645,6 +2648,9 @@ namespace BibliotecaUdeA.Droid
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
+			// aapt resource value: 0x7f080099
+			public const int imageBook = 2131230873;
+			
 			// aapt resource value: 0x7f0800ab
 			public const int info = 2131230891;
 			
@@ -2683,12 +2689,6 @@ namespace BibliotecaUdeA.Droid
 			
 			// aapt resource value: 0x7f0800b1
 			public const int message = 2131230897;
-			
-			// aapt resource value: 0x7f08009a
-			public const int message_description = 2131230874;
-			
-			// aapt resource value: 0x7f080099
-			public const int message_title = 2131230873;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
