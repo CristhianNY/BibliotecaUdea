@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaUdeADominio", "BibliotecaUdeA\BibliotecaUdeADominio.csproj", "{2E044495-AB1D-4860-88E2-04C289B3885E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaUdeA", "BibliotecaUdeA\BibliotecaUdeA.csproj", "{2E044495-AB1D-4860-88E2-04C289B3885E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaUdeA.Droid", "Droid\BibliotecaUdeA.Droid.csproj", "{BC5878F9-9894-4C40-B070-B876DB99C97E}"
 EndProject
