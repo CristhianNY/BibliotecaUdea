@@ -29,10 +29,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Business\Dtos\BookItem.cs" />
+    <Compile Include="Business\Managers\BooksManager.cs" />
+    <Compile Include="Business\Managers\BaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
     <Folder Include="Business\Dtos\" />
+    <Folder Include="Business\Managers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

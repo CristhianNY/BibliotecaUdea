@@ -1,20 +1,17 @@
-﻿
-using System;
-using System.Collections.Generic;
-using Android.App;
-using Android.Content.PM;
+﻿using System.Collections.Generic;
+using Android.OS;
 using Android.Support.V4.App;
 using Android.Support.V4.Content;
-using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Widget;
 using BibliotecaUdeA.Business.Dtos;
+using Java.Lang;
 
 namespace BibliotecaUdeA.Droid.Features
 {
-    [Activity(Label = "HomeActivity", MainLauncher = true)]
-    public class HomeActivity : Activity 
+    [Android.App.Activity(Label = "HomeActivity", MainLauncher = true)]
+    public class HomeActivity : FragmentActivity, LoaderManager.ILoaderCallbacks
     {
         private const int loaderId = 1;
         private BooksTaskLoader booksTaskLoader;
@@ -45,7 +42,8 @@ namespace BibliotecaUdeA.Droid.Features
 
         private void InitLoaders()
         {
-
+            booksTaskLoader = new BooksTaskLoader(this,"");
+            SupportLoaderManager.InitLoader(loaderId, null, this);
         }
             #endregion
 
@@ -59,6 +57,21 @@ namespace BibliotecaUdeA.Droid.Features
 
         }
 
-            #endregion
+        public Loader OnCreateLoader(int id, Bundle args)
+        {
+            throw new System.NotImplementedException();
         }
+
+        public void OnLoadFinished(Loader loader, Object data)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnLoaderReset(Loader loader)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+    }
 }
