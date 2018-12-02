@@ -31,11 +31,19 @@
     <Compile Include="Business\Dtos\BookItem.cs" />
     <Compile Include="Business\Managers\BooksManager.cs" />
     <Compile Include="Business\Managers\BaseManager.cs" />
+    <Compile Include="Business\Contracts\Repositories\Remote\IBooksRepository.cs" />
+    <Compile Include="Business\Dtos\BooksResponse.cs" />
+    <Compile Include="Business\DependencyInjection\ServicesLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
     <Folder Include="Business\Dtos\" />
     <Folder Include="Business\Managers\" />
+    <Folder Include="Business\Contracts\" />
+    <Folder Include="Business\Contracts\Repositories\" />
+    <Folder Include="Business\Contracts\Repositories\Local\" />
+    <Folder Include="Business\Contracts\Repositories\Remote\" />
+    <Folder Include="Business\DependencyInjection\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
