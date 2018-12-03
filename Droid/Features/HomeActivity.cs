@@ -11,6 +11,7 @@ using BibliotecaUdeA.Business.Dtos;
 using BibliotecaUdeA.Droid.DependenctInjection;
 using BibliotecaUdeA.Droid.Features.Lastfiveelements;
 using BibliotecaUdeA.Droid.Features.Loaders;
+using BibliotecaUdeA.Droid.Features.SharedPreferences;
 using Java.Lang;
 using Ninject.Modules;
 using Steelkiwi.Com.Library;
@@ -29,13 +30,18 @@ namespace BibliotecaUdeA.Droid.Features
         private LoaderResponse<BaseResponse<BooksResponse>> loaderResponse;
         private DotsLoaderView loaderView;
         private Button btnSearch;
+        Android.Content.Context mContext = Android.App.Application.Context;
+        AppPreferences preference;
 
-        readonly Android.Runtime.JavaList<string> lasSearch = new JavaList<string>();
+
+        Android.Runtime.JavaList<string> lasSearch = new JavaList<string>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
+
+            preference = new AppPreferences(mContext);
 
             InjectDependencies();
            
@@ -72,10 +78,22 @@ namespace BibliotecaUdeA.Droid.Features
 
         private void BtnSearch_Click(object sender, System.EventArgs e)
         {
-        loaderView.Show();         
-        InitLoaders(search_box.Text);
+        loaderView.Show();
+         var name = search_box.Text;
+         
+         var listInPreference=    preference.GetLastFiveNames();
 
-        FecthListBooks();
+            if((listInPreference.Count >= 0)&& listInPreference.Count<5)
+            {
+                preference.SaveName(name);
+            }
+            else
+            {
+                preference.UpdateList(name);
+            }
+            lasSearch = listInPreference;
+            InitLoaders(search_box.Text);
+            FecthListBooks();
         }
 
         private void FecthListBooks()
