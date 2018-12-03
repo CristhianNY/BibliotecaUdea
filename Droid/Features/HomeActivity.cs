@@ -25,6 +25,7 @@ namespace BibliotecaUdeA.Droid.Features
         private BooksTaskLoader booksTaskLoader;
         private  RecyclerView rv_books;
         private EditText search_box;
+        private Button BtnRecent;
         private List<BookItem> books;
         private BooksAdapter booksAdapter;
         private LoaderResponse<BaseResponse<BooksResponse>> loaderResponse;
@@ -40,15 +41,15 @@ namespace BibliotecaUdeA.Droid.Features
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-
+            LoadViews();
             preference = new AppPreferences(mContext);
 
             InjectDependencies();
            
-            LoadViews();
+           
             GetLastFiveSearch();
             btnSearch.Click += BtnSearch_Click;
-            search_box.Click += Search_Box_Click;
+            BtnRecent.Click += Search_Box_Click;
 
                        
         }
@@ -74,24 +75,33 @@ namespace BibliotecaUdeA.Droid.Features
             loaderView = FindViewById<DotsLoaderView>(Resource.Id.dotsLoaderView);
             search_box = FindViewById<EditText>(Resource.Id.search_box);
             btnSearch = FindViewById<Button>(Resource.Id.btn_search);
+            BtnRecent = FindViewById<Button>(Resource.Id.btn_recent);
         }
 
         private void BtnSearch_Click(object sender, System.EventArgs e)
         {
         loaderView.Show();
-         var name = search_box.Text;
-         
+         var name = search_box.Text;   
+               
          var listInPreference=    preference.GetLastFiveNames();
-
-            if((listInPreference.Count >= 0)&& listInPreference.Count<5)
+            if (listInPreference != null)
             {
-                preference.SaveName(name);
+                lasSearch = listInPreference;
+
+                if ((listInPreference.Count >= 0) && listInPreference.Count < 5)
+                {
+                    preference.SaveName(name);
+                }
+                else
+                {
+                    preference.UpdateList(name);
+                }
             }
             else
             {
-                preference.UpdateList(name);
+                preference.SaveName(name);
             }
-            lasSearch = listInPreference;
+
             InitLoaders(search_box.Text);
             FecthListBooks();
         }
@@ -130,6 +140,10 @@ namespace BibliotecaUdeA.Droid.Features
 
         private void Search_Box_Click(object sender, System.EventArgs e)
         {
+            if (preference.GetLastFiveNames() != null)
+            {
+                lasSearch = preference.GetLastFiveNames();
+            }
             var fragment = SearchDialogFragment.NewInstance(lasSearch, this);
             fragment.Show(SupportFragmentManager, nameof(SearchDialogFragment));
         }

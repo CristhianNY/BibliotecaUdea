@@ -25,15 +25,23 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
 
         public void SaveName(string nombre)
         {
-            lasSearch = GetLastFiveNames();
-            if(lasSearch.Count < 5)
+           var lasSearchFive = GetLastFiveNames();
+            if(lasSearchFive != null)
             {
-                lasSearch.Add(nombre);
+                if (lasSearch.Count < 5)
+                {
+                    lasSearch.Add(nombre);
+                }
+                else
+                {
+                    UpdateList(nombre);
+                }
             }
             else
             {
-                UpdateList(nombre);
+                lasSearch.Add(nombre);
             }
+
 
             SaveNames(lasSearch);
             
