@@ -11,6 +11,7 @@ using BibliotecaUdeA.Droid.DependenctInjection;
 using BibliotecaUdeA.Droid.Features.Loaders;
 using Java.Lang;
 using Ninject.Modules;
+using Steelkiwi.Com.Library;
 
 namespace BibliotecaUdeA.Droid.Features
 {
@@ -24,7 +25,7 @@ namespace BibliotecaUdeA.Droid.Features
         private List<BookItem> books;
         private BooksAdapter booksAdapter;
         private LoaderResponse<BaseResponse<BooksResponse>> loaderResponse;
-
+        private DotsLoaderView loaderView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,6 +36,7 @@ namespace BibliotecaUdeA.Droid.Features
             LoadViews();
             InitLoaders();
             FecthListBooks();
+            loaderView.Show();
         }
         #region Class methods
 
@@ -51,6 +53,7 @@ namespace BibliotecaUdeA.Droid.Features
         private void LoadViews()
         {
             rv_books = FindViewById<RecyclerView>(Resource.Id.rv_books);
+            loaderView = FindViewById<DotsLoaderView>(Resource.Id.dotsLoaderView);
             search_box = FindViewById<EditText>(Resource.Id.search_box);
 
         }
@@ -108,7 +111,7 @@ namespace BibliotecaUdeA.Droid.Features
                     var response = loaderResponse.Response.Data;
                     books = response.Books;
                     PrepareRecyclers();
-
+                    loaderView.Hide();
                 }
                 else
                 {

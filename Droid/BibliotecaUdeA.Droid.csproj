@@ -105,6 +105,9 @@
     <Reference Include="Square.Picasso">
       <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
     </Reference>
+    <Reference Include="DotsLoaderView">
+      <HintPath>..\packages\DotsLoaderView.2.0.0\lib\DotsLoaderView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaUdeA\BibliotecaUdeA.csproj">
@@ -143,6 +146,7 @@
     <AndroidResource Include="Resources\drawable\shape_hiperlink_underline.xml" />
     <AndroidResource Include="Resources\layout\Item.axml" />
     <AndroidResource Include="Resources\drawable\content_cardview_border.xml" />
+    <AndroidResource Include="Resources\drawable\cilcle.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />

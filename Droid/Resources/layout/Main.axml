@@ -18,6 +18,14 @@
 
     </android.support.design.widget.TextInputLayout>
     
+    <steelkiwi.com.library.DotsLoaderView
+    android:id="@+id/dotsLoaderView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    app:dlv_item_drawable="@drawable/circle_background"
+    app:dlv_line_color="@color/point_color"
+   />
       <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_books"
                     android:layout_width="match_parent"
