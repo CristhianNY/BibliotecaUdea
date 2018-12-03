@@ -11,7 +11,8 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
         private ISharedPreferences mSharedPrefs;
         private ISharedPreferencesEditor mPrefsEditor;
         private Context mContext;
-       
+        private int contador = 0;
+
         Android.Runtime.JavaList<string> lasSearch = new JavaList<string>();
 
         private static String PREFERENCE_ACCESS_KEY = "PREFERENCE_ACCESS_KEY";
@@ -28,6 +29,7 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
            var lasSearchFive = GetLastFiveNames();
             if(lasSearchFive != null)
             {
+                lasSearch = lasSearchFive;
                 if (lasSearch.Count < 5)
                 {
                     lasSearch.Add(nombre);
@@ -48,13 +50,31 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
         }
         public void UpdateList(string nombre)
         {
+            if (GetLastFiveNames() != null)
+            {
+                lasSearch = GetLastFiveNames();
+
+            }
+           
             if (lasSearch.Count > 0)
             {
-                lasSearch[lasSearch.Count-1] = nombre;
+              
+                contador++;
+                if(contador < 5)
+                {
+                 lasSearch[contador] = nombre;
+                }
+                else
+                {
+                    contador = 0;
+                    lasSearch[contador] = nombre;
+                }
+
+                SaveNames(lasSearch);
             }
            
 
-            SaveNames(lasSearch);
+           
 
         }
 
