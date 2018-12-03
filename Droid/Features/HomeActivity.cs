@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Android.OS;
+using Android.Runtime;
 using Android.Support.V4.App;
 using Android.Support.V4.Content;
 using Android.Support.V7.Widget;
@@ -8,6 +9,7 @@ using Android.Widget;
 using BibliotecaUdeA.Business.DependencyInjection;
 using BibliotecaUdeA.Business.Dtos;
 using BibliotecaUdeA.Droid.DependenctInjection;
+using BibliotecaUdeA.Droid.Features.Lastfiveelements;
 using BibliotecaUdeA.Droid.Features.Loaders;
 using Java.Lang;
 using Ninject.Modules;
@@ -16,7 +18,7 @@ using Steelkiwi.Com.Library;
 namespace BibliotecaUdeA.Droid.Features
 {
     [Android.App.Activity(Label = "HomeActivity", MainLauncher = true)]
-    public class HomeActivity : FragmentActivity, LoaderManager.ILoaderCallbacks
+    public class HomeActivity : FragmentActivity, LoaderManager.ILoaderCallbacks , IOnInteractionSearchDialog
     {
         private const int loaderId = 1;
         private BooksTaskLoader booksTaskLoader;
@@ -28,18 +30,28 @@ namespace BibliotecaUdeA.Droid.Features
         private DotsLoaderView loaderView;
         private Button btnSearch;
 
+        readonly Android.Runtime.JavaList<string> lasSearch = new JavaList<string>();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
 
             InjectDependencies();
+           
             LoadViews();
-
+            GetLastFiveSearch();
             btnSearch.Click += BtnSearch_Click;
+            search_box.Click += Search_Box_Click;
+
+                       
         }
         #region Class methods
 
+        private void GetLastFiveSearch()
+        {
+
+        }
         private void InjectDependencies()
         {
             var modules = new NinjectModule[]
@@ -98,6 +110,13 @@ namespace BibliotecaUdeA.Droid.Features
 
         }
 
+        private void Search_Box_Click(object sender, System.EventArgs e)
+        {
+            var fragment = SearchDialogFragment.NewInstance(lasSearch, this);
+            fragment.Show(SupportFragmentManager, nameof(SearchDialogFragment));
+        }
+
+
         public Loader OnCreateLoader(int id, Bundle args)
         {
             switch (id)
@@ -133,6 +152,11 @@ namespace BibliotecaUdeA.Droid.Features
         public void OnLoaderReset(Loader loader)
         {
             //Not implemented
+        }
+
+        public void OnClickItem(string value)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
