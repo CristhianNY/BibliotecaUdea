@@ -196,8 +196,7 @@ namespace BibliotecaUdeA.Droid.Features
 
         public void OnClickItem(string value)
         {
-
-            Toast.MakeText(this, "estamos buscando tu libro", ToastLength.Long).Show();
+            search_box.Text = value;
         }
 
         #endregion
