@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using BibliotecaUdeA.Business.Dtos;
 using Newtonsoft.Json;
+using Square.Picasso;
 
 namespace BibliotecaUdeA.Droid.Features
 {
@@ -23,6 +24,7 @@ namespace BibliotecaUdeA.Droid.Features
         private TextView price;
         private TextView subtitle;
         private ImageView imagen;
+        private Button btnStore;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -31,7 +33,8 @@ namespace BibliotecaUdeA.Droid.Features
             SetContentView(Resource.Layout.Details);
 
             LoadViews();
-
+            LoadBookInformation();
+            btnStore.Click += BtnStore_Click;
         }
 
         private void LoadViews()
@@ -40,7 +43,24 @@ namespace BibliotecaUdeA.Droid.Features
             price = FindViewById<TextView>(Resource.Id.price);
             subtitle = FindViewById<TextView>(Resource.Id.subtitle);
             imagen = FindViewById<ImageView>(Resource.Id.imagen);
+            btnStore = FindViewById<Button>(Resource.Id.btn_go_to_store);
            
         }
+
+        private void LoadBookInformation()
+        {
+            title.Text = boook.Title;
+            subtitle.Text = boook.SubTitle;
+            price.Text = boook.Price;
+            Picasso.With(this).Load(boook.Image).Into(imagen);
+        }
+
+        void BtnStore_Click(object sender, EventArgs e)
+        {
+            var uri = Android.Net.Uri.Parse(boook.Url);
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
+        }
+
     }
 }

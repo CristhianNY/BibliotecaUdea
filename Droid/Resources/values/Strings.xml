@@ -3,4 +3,5 @@
     <string name="hello">Hello World, Click Me!</string>
     <string name="app_name">BibliotecaUdeA.Droid</string>
     <string name="search">Buscar Libro</string>
+    <string name="go_to_store">Ir a La Tienda</string>
 </resources>

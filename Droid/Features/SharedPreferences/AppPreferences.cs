@@ -48,7 +48,11 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
         }
         public void UpdateList(string nombre)
         {
-            lasSearch[0] = nombre;
+            if (lasSearch.Count > 0)
+            {
+                lasSearch[0] = nombre;
+            }
+           
 
             SaveNames(lasSearch);
 

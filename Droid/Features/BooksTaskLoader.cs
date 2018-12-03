@@ -12,12 +12,14 @@ namespace BibliotecaUdeA.Droid.Features
         private BooksManager booksManager;
         private string name;
 
-        public BooksTaskLoader(Context context, string name) : base(context)
+        public BooksTaskLoader(Context context) : base(context)
         {
-            this.name = name;
             booksManager = new BooksManager();
         }
-
+        public void SetBookName(string name)
+        {
+            this.name = name;
+        }
         public override Java.Lang.Object LoadInBackground()
         {
             var response = booksManager.FetchBooksByName(name);

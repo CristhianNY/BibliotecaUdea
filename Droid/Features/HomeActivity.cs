@@ -5,6 +5,7 @@ using Android.Support.V4.App;
 using Android.Support.V4.Content;
 using Android.Support.V7.Widget;
 using Android.Util;
+using Android.Views.InputMethods;
 using Android.Widget;
 using BibliotecaUdeA.Business.DependencyInjection;
 using BibliotecaUdeA.Business.Dtos;
@@ -32,6 +33,7 @@ namespace BibliotecaUdeA.Droid.Features
         private LoaderResponse<BaseResponse<BooksResponse>> loaderResponse;
         private DotsLoaderView loaderView;
         private Button btnSearch;
+        private LinearLayout mainLayout;
         Android.Content.Context mContext = Android.App.Application.Context;
         AppPreferences preference;
 
@@ -46,12 +48,12 @@ namespace BibliotecaUdeA.Droid.Features
             preference = new AppPreferences(mContext);
 
             InjectDependencies();
-           
-           
+
+            Window.SetSoftInputMode(Android.Views.SoftInput.StateAlwaysHidden);
             GetLastFiveSearch();
             btnSearch.Click += BtnSearch_Click;
             BtnRecent.Click += Search_Box_Click;
-
+            InitLoaders();
                        
         }
         #region Class methods
@@ -77,6 +79,7 @@ namespace BibliotecaUdeA.Droid.Features
             search_box = FindViewById<EditText>(Resource.Id.search_box);
             btnSearch = FindViewById<Button>(Resource.Id.btn_search);
             BtnRecent = FindViewById<Button>(Resource.Id.btn_recent);
+            mainLayout = FindViewById<LinearLayout>(Resource.Id.mainLayout);
         }
 
         private void BtnSearch_Click(object sender, System.EventArgs e)
@@ -103,28 +106,30 @@ namespace BibliotecaUdeA.Droid.Features
                 preference.SaveName(name);
             }
 
-            InitLoaders(search_box.Text);
-            FecthListBooks();
+            InputMethodManager imm = (InputMethodManager)GetSystemService(Android.Content.Context.InputMethodService);
+            imm.HideSoftInputFromWindow(mainLayout.WindowToken, 0);
+            FecthListBooks(name);
         }
 
-        private void FecthListBooks()
+        private void FecthListBooks(string name)
         {
-
+          booksTaskLoader.SetBookName(name);
           booksTaskLoader.ForceLoad();
         }
 
-        private void PrepareRecyclers()
+        private void PrepareRecyclers(List<BookItem> b)
         {
-            booksAdapter = new BooksAdapter(this, books);
+            booksAdapter = new BooksAdapter(this, b);
             booksAdapter.ItemClick += Books_ItemClick;
+            booksAdapter.NotifyDataSetChanged();
             rv_books.SetLayoutManager(new LinearLayoutManager(this));
             rv_books.HasFixedSize = true;
             rv_books.SetAdapter(booksAdapter);
         }
 
-        private void InitLoaders(string name)
+        private void InitLoaders()
         {
-            booksTaskLoader = new BooksTaskLoader(this,name);
+            booksTaskLoader = new BooksTaskLoader(this);
             SupportLoaderManager.InitLoader(loaderId, null, this);
         }
             #endregion
@@ -134,13 +139,9 @@ namespace BibliotecaUdeA.Droid.Features
 
             private void Books_ItemClick(object sender, BookItem item)
         {
-
-            var extras = new Bundle();
-
             Android.Content.Intent intent = new Android.Content.Intent(this, typeof(DetailsActivity));
-            extras.PutString("Book", JsonConvert.SerializeObject(item));
+            intent.PutExtra("Book", JsonConvert.SerializeObject(item));
             StartActivityForResult(intent, 1);
-
         }
 
         private void Search_Box_Click(object sender, System.EventArgs e)
@@ -174,8 +175,10 @@ namespace BibliotecaUdeA.Droid.Features
                 if (loaderResponse.Response.Exception == null)
                 {
                     var response = loaderResponse.Response.Data;
+                  
                     books = response.Books;
-                    PrepareRecyclers();
+                    PrepareRecyclers(books);
+                   
                     loaderView.Hide();
                 }
                 else
