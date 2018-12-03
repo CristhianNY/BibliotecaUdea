@@ -50,7 +50,7 @@ namespace BibliotecaUdeA.Droid.Features.SharedPreferences
         {
             if (lasSearch.Count > 0)
             {
-                lasSearch[0] = nombre;
+                lasSearch[lasSearch.Count-1] = nombre;
             }
            
 
