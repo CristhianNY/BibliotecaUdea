@@ -13,6 +13,7 @@ using BibliotecaUdeA.Droid.Features.Lastfiveelements;
 using BibliotecaUdeA.Droid.Features.Loaders;
 using BibliotecaUdeA.Droid.Features.SharedPreferences;
 using Java.Lang;
+using Newtonsoft.Json;
 using Ninject.Modules;
 using Steelkiwi.Com.Library;
 
@@ -134,7 +135,11 @@ namespace BibliotecaUdeA.Droid.Features
             private void Books_ItemClick(object sender, BookItem item)
         {
 
-            Log.Info("prueba", "se llama el elemento");
+            var extras = new Bundle();
+
+            Android.Content.Intent intent = new Android.Content.Intent(this, typeof(DetailsActivity));
+            extras.PutString("Book", JsonConvert.SerializeObject(item));
+            StartActivityForResult(intent, 1);
 
         }
 
@@ -188,7 +193,8 @@ namespace BibliotecaUdeA.Droid.Features
 
         public void OnClickItem(string value)
         {
-            throw new System.NotImplementedException();
+
+            Toast.MakeText(this, "estamos buscando tu libro", ToastLength.Long).Show();
         }
 
         #endregion

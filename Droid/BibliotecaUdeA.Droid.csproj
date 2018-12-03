@@ -134,6 +134,7 @@
     <Compile Include="Features\Lastfiveelements\IOnInteractionSearchDialog.cs" />
     <Compile Include="Features\Lastfiveelements\FilterHelper.cs" />
     <Compile Include="Features\SharedPreferences\AppPreferences.cs" />
+    <Compile Include="Features\DetailsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -158,6 +159,7 @@
     <AndroidResource Include="Resources\layout\item_search_dialog.axml" />
     <AndroidResource Include="Resources\values\Dimens.xml" />
     <AndroidResource Include="Resources\layout\search_dialog_fragment.axml" />
+    <AndroidResource Include="Resources\layout\Details.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
