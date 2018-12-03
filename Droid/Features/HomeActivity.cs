@@ -26,6 +26,7 @@ namespace BibliotecaUdeA.Droid.Features
         private BooksAdapter booksAdapter;
         private LoaderResponse<BaseResponse<BooksResponse>> loaderResponse;
         private DotsLoaderView loaderView;
+        private Button btnSearch;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,9 +35,8 @@ namespace BibliotecaUdeA.Droid.Features
 
             InjectDependencies();
             LoadViews();
-            InitLoaders();
-            FecthListBooks();
-            loaderView.Show();
+
+            btnSearch.Click += BtnSearch_Click;
         }
         #region Class methods
 
@@ -55,11 +55,20 @@ namespace BibliotecaUdeA.Droid.Features
             rv_books = FindViewById<RecyclerView>(Resource.Id.rv_books);
             loaderView = FindViewById<DotsLoaderView>(Resource.Id.dotsLoaderView);
             search_box = FindViewById<EditText>(Resource.Id.search_box);
+            btnSearch = FindViewById<Button>(Resource.Id.btn_search);
+        }
 
+        private void BtnSearch_Click(object sender, System.EventArgs e)
+        {
+        loaderView.Show();         
+        InitLoaders(search_box.Text);
+
+        FecthListBooks();
         }
 
         private void FecthListBooks()
         {
+
           booksTaskLoader.ForceLoad();
         }
 
@@ -72,9 +81,9 @@ namespace BibliotecaUdeA.Droid.Features
             rv_books.SetAdapter(booksAdapter);
         }
 
-        private void InitLoaders()
+        private void InitLoaders(string name)
         {
-            booksTaskLoader = new BooksTaskLoader(this,"");
+            booksTaskLoader = new BooksTaskLoader(this,name);
             SupportLoaderManager.InitLoader(loaderId, null, this);
         }
             #endregion
